@@ -1,0 +1,92 @@
+@import "constants";
+
+.content-table {
+    -webkit-box-shadow: 20px 10px 13px -7px #000000, 1px 3px 22px 10px rgba(0,0,0,0); 
+    box-shadow: 20px 10px 13px -7px #000000, 1px 3px 22px 10px rgba(0,0,0,0);
+    margin-top: 2vh;
+    width: 94%;
+    border-spacing: 0;
+}
+
+.content-row {
+    background-color: $veryDarkDesaturatedBlue;
+    padding: 25px;
+    display: inline-flex;
+    width: 100%;
+    border-bottom: 1px solid $veryDarkGrayishBlue;
+    &:first-child {
+        border-radius: 8px 8px 0 0;
+    }
+    &:last-child {
+        border-radius: 0 0 8px 8px;
+        border-bottom: none;
+    }
+    & td {
+        width: 100%;
+    }
+}
+
+.content-row-container {
+    display: inline-flex;
+    width: 100%;
+}
+
+.row-title {
+    margin-top: 3px;
+    margin-left: 25px;
+    color: $lightGrayishBlue;
+    font-family: $fontfamily;
+    font-size: $standardFontSize;
+    font-weight: $fontWeightHeavy;
+}
+
+.last-row {
+    color: $veryMediumDesaturatedBlue;
+    font-size: $bodyFontSize;
+    font-weight: $fontWeightBold;
+    font-family: $fontfamily;
+    justify-content: center;
+    position:relative;
+    height: 50%;
+}
+
+.left {
+    position: absolute;
+    left: 0;
+}
+
+.center {
+    & a {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    & a:hover {
+        color: $veryLightGray;
+    }
+    & .selected {
+        color: $brightBlue;
+    }
+}
+
+.right {
+    position: absolute;
+    right: 0;
+    &:hover {
+        color: $veryLightGray;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .content-row {
+        padding:15px;
+    }
+    .last-row {
+        font-size: $mobileBodyFontSize;
+        & .center {
+            display: none;
+        }
+    }
+    .row-title {
+        font-size: $mobileStandardFontSize;
+    }
+}

@@ -1,0 +1,51 @@
+@import "constants";
+@import "row-checkbox";
+
+.add-row {
+    @include apply-shadow;
+    background-color: $veryDarkDesaturatedBlue;
+    border-radius: 8px;
+    padding: 25px;
+    display: inline-flex;
+    width: 94%;
+}
+
+.row-input {
+    margin-left: 25px;
+    background-color: $veryDarkDesaturatedBlue;
+    width: 100%;
+    border: none;
+    caret-color: $brightBlue;
+    color: $lightGrayishBlue;
+    font-family: $fontfamily;
+    font-size: $standardFontSize;
+    font-weight: $fontWeightHeavy;
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        color: $veryLightGray;
+    }
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $veryMediumDesaturatedBlue;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $veryMediumDesaturatedBlue;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: $veryMediumDesaturatedBlue;
+}
+
+@media screen and (max-width: 375px) {
+    .add-row {
+        padding: 15px;
+    }
+    .row-input {
+        font-size: $mobileStandardFontSize;
+    }
+}

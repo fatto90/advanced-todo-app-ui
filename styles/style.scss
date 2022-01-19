@@ -1,0 +1,27 @@
+@import "constants";
+@import "content";
+
+body {
+    background-color: $veryDarkBlue;
+    margin:0%;
+}
+
+.container {
+    font-family: $fontfamily;
+    font-weight: $fontWeightHeavy;
+    font-size: $standardFontSize;
+    color:white;
+    display:flex;
+    justify-content: center;
+}
+
+.header-image {
+    z-index: -1;
+    height:300px;
+    width: 100vw;
+    position: absolute;
+    background-image: url("../images/bg-desktop-dark.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

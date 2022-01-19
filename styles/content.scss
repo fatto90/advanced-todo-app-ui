@@ -1,0 +1,54 @@
+@import "constants";
+@import "addrow";
+@import "content-table";
+
+.content-header {
+    position:relative;
+    width: 100%;
+    margin: 6vh 0 4vh 0;
+    & .title {
+        font-size: $titleFontSize;
+        font-weight: $fontWeightBold;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+    }
+    & .theme-image {
+        color:white;
+        position:absolute;
+        top: 10px;
+        right: 30px;
+    }
+}
+
+.content {
+    padding: 20px;
+}
+
+.content-filters {
+    @include apply-shadow;
+    margin-top: 2vh;
+    background-color: $veryDarkDesaturatedBlue;
+    color: $veryMediumDesaturatedBlue;
+    border-radius: 8px;
+    padding: 15px;
+    display: none;
+    justify-content: center;
+    font-size: $mobileBodyFontSize;
+    width: 94%;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 5em;
+    color: $veryMediumDesaturatedBlue;
+    font-size: $bodyFontSize;
+    font-weight: $fontWeightBold;
+    font-family: $fontfamily;
+}
+
+@media screen and (max-width: 375px) {
+    .content-filters {
+        display: inline-flex;
+    }
+}

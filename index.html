@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Todo app</title>
+
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="header-image"></div>
+  <div class="container">
+    <div class="content">
+      <div class="content-header">
+        <span class="title">Todo</span>
+        <div class="theme-image">
+          <img src="images/icon-sun.svg">
+        </div>
+      </div>
+      <div class="add-row">
+        <div class="row-checkbox-unselected">
+          <div></div>
+        </div>
+        <input type="checkbox" id="checkbox-add" />
+        <label for="checkbox-add"></label>
+        <input type="text" class="row-input" placeholder="Type something..." />
+      </div>
+      <table class="content-table">
+        <tr class="content-row">
+          <td>
+            <div class="content-row-container">
+              <div class="row-checkbox-selected">
+                <div>✓</div>
+              </div>
+              <input type="checkbox" id="checkbox-1" />
+              <label for="checkbox-1"></label>
+              <span class="row-title">Something</span>
+            </div>
+          </td>
+        </tr>
+        <tr class="content-row">
+          <td>
+            <div class="content-row-container">
+              <div class="row-checkbox-unselected">
+                <div></div>
+              </div>
+              <input type="checkbox" id="checkbox-1" />
+              <label for="checkbox-1"></label>
+              <span class="row-title">Something</span>
+            </div>
+          </td>
+        </tr>
+        <tr class="content-row">
+          <td>
+            <div class="content-row-container">
+              <div class="row-checkbox-selected">
+                <div>✓</div>
+              </div>
+              <input type="checkbox" id="checkbox-1" />
+              <label for="checkbox-1"></label>
+              <span class="row-title">Something</span>
+            </div>
+          </td>
+        </tr>
+        <tr class="content-row">
+          <td>
+            <div class="content-row-container">
+              <div class="row-checkbox-selected">
+                <div>✓</div>
+              </div>
+              <input type="checkbox" id="checkbox-1" />
+              <label for="checkbox-1"></label>
+              <span class="row-title">Something</span>
+            </div>
+          </td>
+        </tr>
+        <tr class="content-row">
+          <td>
+            <div class="content-row-container last-row">
+              <div class="left">
+                <label><!-- Add dynamic number --> 5 items left</label>
+              </div>
+              <div class="center">
+                <a class="selected">All</a>
+                <a>Active</a>
+                <a>Completed</a>
+              </div>
+              <div class="right">
+                <a>Clear Completed</a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div class="content-filters">
+        <div class="center">
+          <a class="selected">All</a>
+          <a>Active</a>
+          <a>Completed</a>
+        </div>
+      </div>
+      <div class="footer">
+        Drag and drop to reorder list
+      </div>
+    </div>
+  </div>
+</body>
+</html>

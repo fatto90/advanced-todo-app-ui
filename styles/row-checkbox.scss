@@ -1,0 +1,64 @@
+@import "constants";
+
+@mixin row-checkbox {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-size: $bodyFontSize;
+    text-align: center;
+    background-color: $veryDarkDesaturatedBlue;
+    cursor: pointer;
+    & div {
+        margin-top: 1px;
+        margin-left: 1px;
+        width: 26px;
+        height: 26px;
+        background-color: $veryDarkDesaturatedBlue;
+        border-radius: 50%;
+    }
+}
+
+.row-checkbox-selected {
+    @include row-checkbox;
+    width: 30px;
+    height: 30px;
+    background-image: $checkBackground;
+    & div {
+        background: transparent;
+    }
+}
+
+.row-checkbox-unselected {
+    @include row-checkbox;
+    border: solid 1px $darkGrayishBlue;
+}
+
+.row-checkbox-unselected:hover {
+    background-image: $checkBackground;
+    & div {
+        background-color: $veryDarkDesaturatedBlue;
+    }
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+@media screen and (max-width: 375px) {
+    @mixin row-checkbox-small {
+        width: 23px;
+        height: 23px;
+        & div {
+            width: 21px;
+            height: 21px;
+        }
+    }
+    .row-checkbox-selected {
+        @include row-checkbox-small;
+        width: 25px;
+        height: 25px;
+    }
+    .row-checkbox-unselected {
+        @include row-checkbox-small;
+    }
+}
